@@ -1,0 +1,22 @@
+import pyautogui
+import time
+import psutil
+import subprocess
+import random
+
+# Made using pyautogui library
+
+pyautogui.moveTo(-2171,1039,duration=1)
+pyautogui.dragTo(-3000,60,duration=1)
+pyautogui.hotkey('delete')
+
+delay = random.uniform(0.01, 0.1)
+
+x = ('#You shall not use me anymore')
+y = ('\n#hahahahahahaha')
+for char in x:
+    pyautogui.write(char)
+    delay
+for chara in y:
+    pyautogui.write(chara)
+    delay
