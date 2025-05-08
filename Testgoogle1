@@ -1,0 +1,25 @@
+import pyautogui
+import time
+import psutil
+
+# See if Goolge is running and kill it
+
+for proc in psutil.process_iter(['pid', 'name']):
+    print(str(proc.info['pid']) + "-" + proc.info['name'])
+    if proc.info['name'] == 'Chrome.exe':
+        proc.kill()
+time.sleep(2)
+x = 1
+pyautogui.click(960,1160)
+time.sleep(1)
+while x <= 5:
+     pyautogui.click(760,640)
+     pyautogui.write('Test ' + str(x))
+     pyautogui.hotkey('enter')
+     time.sleep(1)
+     pyautogui.hotkey('ctrl', 't')
+     time.sleep(0.5)
+     x += 1
+pyautogui.click(651,651)
+
+pyautogui.write('What do you think?')
